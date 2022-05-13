@@ -1,0 +1,420 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    /* font-family: "Merriweather", serif; */
+    font-family: "Noto Sans", sans-serif;
+    color: white;
+    font-size: 12pt;
+    user-select: none;
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+    outline-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+div.navigation {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 12%;
+    min-height: 60px;
+    top: 0;
+    background-color: black;
+    z-index: 99999;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.logo {
+    margin-left: 20px;
+    font-size: 36pt;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+}
+
+div.buttons {
+    margin-right: 20px;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+button.register {
+    height: 50%;
+    min-height: 40px;
+    width: 100px;
+    border-radius: 35px;
+    border: white solid 2px;
+    background-color: transparent;
+    color: white;
+    margin: 0 5px;
+}
+
+button.profile {
+    height: 50%;
+    min-height: 40px;
+    width: 100px;
+    border-radius: 35px;
+    border: white solid 2px;
+    background-color: transparent;
+    color: white;
+    margin: 0 5px;
+}
+
+button.login {
+    height: 50%;
+    min-height: 40px;
+    width: 90px;
+    border-radius: 35px;
+    border: white solid 2px;
+    background-color: transparent;
+    color: white;
+    margin: 0 5px;
+}
+
+button.login[alt*="login_page"] {
+    height: 50%;
+    min-height: 40px;
+    width: 90px;
+    border-radius: 35px;
+    border: white solid 2px;
+    background-color: transparent;
+    color: white;
+    margin: 15px 5px;
+}
+
+button.home {
+    height: 50%;
+    min-height: 40px;
+    width: 90px;
+    border-radius: 35px;
+    border: white solid 2px;
+    background-color: transparent;
+    color: white;
+    margin: 0 5px;
+}
+
+button.submit {
+    height: 50%;
+    min-height: 40px;
+    width: 90px;
+    border-radius: 35px;
+    border: white solid 2px;
+    background-color: transparent;
+    color: white;
+    margin: 15px 5px;
+}
+
+button.logout {
+    height: 50%;
+    min-height: 40px;
+    width: 90px;
+    border-radius: 35px;
+    border: white solid 2px;
+    background-color: transparent;
+    color: white;
+    margin: 15px 5px;
+}
+
+button.update {
+    height: 50%;
+    min-height: 40px;
+    width: 90px;
+    border-radius: 35px;
+    border: white solid 2px;
+    background-color: transparent;
+    color: white;
+    margin: 15px 5px;
+}
+
+button.verify {
+    height: 50%;
+    min-height: 40px;
+    width: 90px;
+    border-radius: 35px;
+    border: white solid 2px;
+    background-color: transparent;
+    color: white;
+    margin: 15px 5px;
+}
+
+button.delete {
+    height: 50%;
+    min-height: 40px;
+    width: 90px;
+    border-radius: 35px;
+    border: red solid 2px;
+    background-color: transparent;
+    color: red;
+    margin: 15px 5px;
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-size: 100pt;
+    color: white;
+    z-index: 100;
+}
+
+h2 {
+    font-family: "Merriweather", serif;
+    font-weight: 600;
+    font-size: 18pt;
+    color: white;
+    z-index: 100;
+}
+
+h3 {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-size: 16pt;
+    color: white;
+    z-index: 100;
+}
+
+div.homecontent {
+    position: absolute;
+    left: 50%;
+    margin-top: 55rem;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 100;
+}
+
+div.introduction1 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+div.introduction2 {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    /* height: 300px; */
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+    padding: 0px 70px 70px;
+    text-align: justify;
+}
+
+div.content {
+    position: absolute;
+    left: 50%;
+    margin-top: 8em;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 100;
+}
+
+form.register {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+input.standard {
+    width: 300px;
+    height: 60px;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+select.standard {
+    width: 350px;
+    height: 60px;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 1em;
+}
+
+h4.err {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+div.thankyou {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+div.textbox {
+    text-align: justify;
+    width: 350px;
+    margin: 15px 0;
+    padding: 20px 20px;
+    background-color: transparent;
+    border: white dashed 2px;
+}
+
+div.signers {
+    text-align: justify;
+    width: 500px;
+    margin: 15px 0;
+    padding: 20px 20px;
+}
+
+ul {
+    padding: 0px;
+}
+
+li {
+    text-align: center;
+}
+
+img.canvas {
+    text-align: justify;
+    width: 500px;
+    height: 250px;
+    margin: 15px 0;
+    padding: 20px 20px;
+    background-color: transparent;
+    border: white dashed 2px;
+    pointer-events: none;
+}
+
+div.profile {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+/* petition canvas */
+#canvas {
+    border: 2px dashed white;
+    margin: 15px 15px;
+    cursor: crosshair;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* signature img on profile page */
+img[alt*="signature"] {
+    max-width: 500px;
+}
+
+div.videocontainer {
+    position: fixed;
+}
+
+iframe.videoplayer {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 0;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* media queries */
+
+@media (max-width: 1024px) {
+    div.videocontainer {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    button.register {
+        width: 90px;
+    }
+
+    div.logo {
+        margin-left: 20px;
+        font-size: 32px;
+        font-family: "Merriweather", serif;
+        font-weight: 900;
+    }
+
+    div.homecontent {
+        margin-top: 7rem;
+    }
+
+    h1 {
+        font-size: 45pt;
+    }
+
+    h3 {
+        font-size: 12pt;
+    }
+
+    div.introduction1 {
+        height: 150;
+    }
+
+    div.introduction2 {
+        padding: 0px 0px 50px;
+    }
+
+    #canvas {
+        width: 320px;
+        height: 200px;
+    }
+
+    img.canvas {
+        width: 320px;
+        height: 200px;
+    }
+
+    div.signers {
+        width: 370px;
+    }
+
+    img.missing {
+        max-width: 370px;
+    }
+}

@@ -1,0 +1,30 @@
+<div class="navigation">
+    <div class="logo">🙅🏻🎾</div>
+    <div class="buttons">
+        <form>
+            <button class="home" formaction="/home">HOME</button>
+        </form>
+    </div>
+</div>
+
+<div class="content">
+    <div class="profile">
+        {{#if err}}
+            <h4 class="err">{{err}}</h4>
+        {{/if}}
+
+        <h2>I, the undersigned, agree that we as society should BAN SPORT.</h2>
+        <form class="register" method="POST" autocomplete="off">
+            <canvas id="canvas" width="500" height="250">
+            </canvas>
+            <input name="sig" id="sig" type="hidden" value="" />
+            <div>
+                <button class="submit" id="submit">SUBMIT</button>
+                <button class="submit" id="clear" type="button">CLEAR</button>
+            </div>
+
+            <p><a href="/logout">Complete profile later.</a></p>
+
+        </form>
+    </div>
+</div>

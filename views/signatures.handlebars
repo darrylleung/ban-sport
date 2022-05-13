@@ -1,0 +1,34 @@
+<div class="navigation">
+    <div class="logo">🙅🏻🏋🏻‍♂️</div>
+    <div class="buttons">
+        <form>
+            <button class="profile" formaction="/profile">PROFILE</button>
+            <button class="home" formaction="/home">HOME</button>
+        </form>
+    </div>
+</div>
+
+<div class="content">
+    <div class="profile">
+        <div>
+            <h2>A big "thank you" to all our supporters: </h2>
+        </div>
+        <div class="signers">
+            <ul>
+                {{#signers}}
+                    <li>{{capitalize firstname}}
+                        {{capitalize lastname}}
+                        /
+                        {{age}}
+                        /
+                        <a href="/profile/signers/{{city}}">{{capitalize
+                                city
+                            }}</a>
+                        /
+                        <a href="{{homepage}}" target="_blank">
+                            HOMEPAGE</a></li>
+                {{/signers}}
+            </ul>
+        </div>
+    </div>
+</div>

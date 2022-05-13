@@ -1,0 +1,30 @@
+<div class="navigation">
+    <div class="logo">🙅🏻🏐</div>
+    <div class="buttons">
+        <form>
+            <button class="profile" formaction="/profile">PROFILE</button>
+            <button class="home" formaction="/home">HOME</button>
+        </form>
+    </div>
+</div>
+
+<div class="content">
+    <div class="profile">
+        {{#if err}}
+            <h4 class="err">{{err}}</h4>
+        {{/if}}
+
+        <div class="textbox">
+            <p>Imagine actually supporting sport. 🤮 Are you sure you want to
+                delete your profile?</p>
+        </div>
+
+        <form class="register" method="POST">
+            <button class="delete" id="delete">DELETE</button>
+            <div>
+                <a href="/profile">I changed my mind!</a>
+            </div>
+        </form>
+
+    </div>
+</div>

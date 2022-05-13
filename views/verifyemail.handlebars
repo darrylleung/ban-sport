@@ -1,0 +1,27 @@
+<div class="navigation">
+    <div class="logo">🙅🏻🏊🏼‍♂️</div>
+    <div class="buttons">
+        <form>
+            <button class="login" formaction="/login">LOG IN</button>
+            <button class="home" formaction="/home">HOME</button>
+        </form>
+    </div>
+</div>
+
+<div class="content">
+    <div class="profile">
+        {{#if err}}
+            <h4 class="err">{{err}}</h4>
+        {{/if}}
+
+        <div class="textbox">
+            <p>Enter the e-mail address associated with your account.</p>
+        </div>
+
+        <form class="register" method="POST" autocomplete="off">
+            <input class="standard" name="email" />
+            <div>E-mail Address</div>
+            <button class="submit" id="submit">SUBMIT</button>
+        </form>
+    </div>
+</div>

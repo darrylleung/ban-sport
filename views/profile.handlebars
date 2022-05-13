@@ -1,0 +1,27 @@
+<div class="navigation">
+    <div class="logo">🙅🏻⚽️</div>
+    <div class="buttons">
+        <form>
+            <button class="home" formaction="/home">HOME</button>
+        </form>
+    </div>
+</div>
+
+<div class="content">
+    <div class="thankyou">
+        {{msg}}
+    </div>
+    <div class="profile">
+        <div>
+            <img class="canvas" src="{{sigUrl}}" alt="signature" />
+        </div>
+        <a href="/profile/signers">View all signers of this petition.</a>
+        <br />
+        <a href="/profile/edit">Edit your profile.</a>
+        <a href="/profile/delete">Delete your profile.</a>
+
+        <form method="GET" action="/logout">
+            <button class="logout">LOG OUT</button>
+        </form>
+    </div>
+</div>

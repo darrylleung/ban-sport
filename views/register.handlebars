@@ -1,0 +1,32 @@
+<div class="navigation">
+    <div class="logo">🙅🏻🏀</div>
+    <div class="buttons">
+        <form>
+            <button class="login" formaction="/login">LOG IN</button>
+            <button class="home" formaction="/home">HOME</button>
+        </form>
+    </div>
+</div>
+
+<div class="content">
+    {{#if err}}
+        <h4 class="err">{{err}}</h4>
+    {{/if}}
+
+    <form class="register" method="POST" autocomplete="off">
+        <input class="standard" name="firstname" />
+        <div>First Name</div>
+        <input class="standard" name="lastname" />
+        <div>Last Name</div>
+        <input class="standard" name="email" type="email"/>
+        <div>E-mail Address</div>
+        <input class="standard" name="password" type="password" />
+        <div>Password</div>
+        <input class="standard" name="password2" type="password" />
+        <div>Enter your password again</div>
+        <input name="resetchoice" type="hidden" value=" " />
+        <input name="resetsecret" type="hidden" value=" " />
+        <input name="signed" type="hidden" value="no" />
+        <button class="submit">SUBMIT</button>
+    </form>
+</div>

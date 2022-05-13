@@ -1,0 +1,29 @@
+<div class="navigation">
+    <div class="logo">🙅🏻⚾️</div>
+    <div class="buttons">
+        <form>
+            <button class="home" formaction="/home">HOME</button>
+        </form>
+    </div>
+</div>
+
+<div class="content">
+    {{#if err}}
+        <h4 class="err">{{err}}</h4>
+    {{/if}}
+
+    <form class="register" method="POST" autocomplete="off">
+        <div class="textbox">
+            <p>Tell us more about yourself. We promise not to sell your data to
+                advertisers or other nefarious actors. (Optional)</p>
+        </div>
+        <input class="standard" name="age" type="number" min="0" />
+        <div>Age</div>
+        <input class="standard" name="city" />
+        <div>City</div>
+        <input class="standard" name="url" />
+        <div>Homepage</div>
+        <button class="submit">SUBMIT</button>
+        <p><a href="/register/petition">Skip this step.</a></p>
+    </form>
+</div>

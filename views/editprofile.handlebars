@@ -1,0 +1,35 @@
+<div class="navigation">
+    <div class="logo">🙅🏻🥊</div>
+    <div class="buttons">
+        <form>
+            <button class="profile" formaction="/profile">PROFILE</button>
+            <button class="home" formaction="/home">HOME</button>
+        </form>
+    </div>
+</div>
+
+<div class="content">
+    <div class="profile">
+        {{#if err}}
+            <h4 class="err">{{err}}</h4>
+        {{/if}}
+
+        <form class="register" method="POST" autocomplete="off">
+            <input class="standard" name="firstname" value="{{firstname}}" />
+            <div>First Name</div>
+            <input class="standard" name="lastname" value="{{lastname}}" />
+            <div>Last Name</div>
+            <input class="standard" name="email" value="{{email}}" />
+            <div>E-mail Address</div>
+            <input class="standard" name="password" type="password" />
+            <div>Password</div>
+            <input class="standard" name="age" value="{{age}}" />
+            <div>Age</div>
+            <input class="standard" name="city" value="{{city}}" />
+            <div>City</div>
+            <input class="standard" name="homepage" value="{{homepage}}" />
+            <div>Homepage</div>
+            <button class="update" id="update">UPDATE</button>
+        </form>
+    </div>
+</div>

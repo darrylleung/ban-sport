@@ -1,0 +1,23 @@
+<div class="navigation">
+    <div class="logo">🙅🏻🎳</div>
+    <div class="buttons">
+        <form>
+            <button class="profile" formaction="/profile">PROFILE</button>
+            <button class="home" formaction="/home">HOME</button>
+        </form>
+    </div>
+</div>
+
+<div class="content">
+    <div class="profile">
+        <h2>A big "thank you" to all our supporters in
+            {{city}}:</h2>
+        <div class="signers">
+            <ul>
+                {{#signers}}
+                    <li>{{capitalize firstname}} {{capitalize lastname}}</li>
+                {{/signers}}
+            </ul>
+        </div>
+    </div>
+</div>
